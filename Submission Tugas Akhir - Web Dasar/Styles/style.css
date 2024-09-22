@@ -1,0 +1,256 @@
+/*General*/
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/*Head Content*/
+.header-container {
+    width: 100%;
+    max-width: 2400px;
+    padding-block: 1rem;
+    margin-inline: auto;
+    background-color: #6A9C89;
+    color: #E9EFEC;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid black;
+    padding-bottom: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-name {
+    font-size: 1.45rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.nav-list ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list ul li {
+    position: relative;
+}
+
+.nav-list ul li a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #E9EFEC;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-list ul li:hover a {
+    background-color: black;
+    color: white;
+}
+
+/* Dropdown */
+.nav-list ul .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.nav-list ul .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-list ul .dropdown .dropdown-content li {
+    padding: 10px;
+}
+
+.nav-list ul .dropdown .dropdown-content li a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list ul .dropdown .dropdown-content li a:hover {
+    background-color: #444;
+}
+
+
+/*Main Content*/
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+    background-color: #C4DAD2;
+    color: black;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+article {
+    text-align: justify;
+}
+
+.card {
+    border-width: 2px; 
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+}
+
+h2 {
+    text-decoration: underline; /* Menambahkan garis bawah pada <h2> */
+}
+
+h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.contact {
+    list-style: none; 
+    padding: 0; 
+}
+
+.contact img {
+    width: 65px; 
+    height: auto;
+    margin-right: 10px;
+    display: flex;
+    padding: 0.3rem;
+    align-items: center;  
+}
+
+aside {
+    max-height: 565px;
+    display: flex;
+    text-align: center;
+}
+
+.profile-card h3 {
+    text-align: center;
+
+}
+.profile-image {
+    width: 200px;              
+    height: auto;              
+    border: 3px solid black;  
+    border-radius: 8px;        
+}
+
+.profile-card {
+    border-width: 2px; 
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+}
+
+
+/*Footer Content*/
+.footer {
+    background-color: #333; 
+    color: white;           
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto; 
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.social-links {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Media Query*/
+@media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+  
+    main aside {
+      align-self: center;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    nav ul {
+      justify-content: center;
+    }
+
+    footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info, .social-links {
+        text-align: center;
+    }
+}
